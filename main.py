@@ -44,7 +44,7 @@ def get_chat_response(message, chat_history):
 
 
 def main():
-    st.title("Ask the AI")
+    st.title("Ask the AI 🤖")
     
     # Session state to store chat history and the last response
     if "chat_history" not in st.session_state:
@@ -53,7 +53,7 @@ def main():
         for msg in st.session_state.chat_history:
             st.chat_message(msg["role"]).write(msg['content'])
 
-    user_input = st.chat_input("Enter your message:", key="user_input")
+    user_input = st.chat_input("Enter your message...", key="user_input")
     if user_input:    # st.button(label="Send")
         if user_input.strip():
             st.chat_message("user").write(user_input)
