@@ -14,7 +14,7 @@ except KeyError:
 # sidebar controls
 model_name = st.sidebar.selectbox(label="Choose the model", options=["llama3-70b-8192"], index=0)
 temperature = st.sidebar.slider(label="Set Temperature", min_value=0.0, max_value=1.0, value=0.7, step=0.1)
-MAX_CHAT_HISTORY_LENGTH = int(st.sidebar.number_input(label="Max history length", min_value=1, max_value=10, value=10))
+MAX_CHAT_HISTORY_LENGTH = int(st.sidebar.number_input(label="Max history length", min_value=1, max_value=10, value=4))
 
 def clear_chat():
     st.session_state.chat_history = []
